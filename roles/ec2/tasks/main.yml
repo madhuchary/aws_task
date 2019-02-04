@@ -17,5 +17,6 @@
     Name: lncinstance
   register: ec2
 - debug:
-         msg: "{{ ec2 }}"
-
+         msg: "{{ item.public_ip }}"
+  with_items:
+          "{{ ec2.tagged_instances }}"
