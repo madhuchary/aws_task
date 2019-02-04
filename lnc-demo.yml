@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+        - vpc
+        - sg
+        - ec2

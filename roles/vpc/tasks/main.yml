@@ -1,0 +1,17 @@
+---
+- name: "Creating VPC"
+  ec2_vpc_net:
+   name: "lncvpc"
+   state: present
+   cidr_block: 10.0.0.0/24
+   resource_tags: {"Name": "lncvpc"}
+   region: us-east-1
+  register: vpc
+- debug:
+        msg: "{{ vpc.vpc.id }}"
+        #  with_items:
+        #  "{{ vpc }}"
+        #
+- include: subnet.yml
+- include: igw.yml
+- include: route_table.yml

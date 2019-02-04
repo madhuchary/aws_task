@@ -1,0 +1,10 @@
+---
+- name: creating IGW
+  ec2_vpc_igw:
+    vpc_id: "{{ vpc.vpc.id }}"
+    region: us-east-1
+    state: present
+  register: igw
+
+- debug:
+        msg: "{{ igw.gateway_id }}"

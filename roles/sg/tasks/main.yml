@@ -1,0 +1,15 @@
+---
+- name: "Creating security group for nginx"
+  ec2_group:
+   name: "lncsg"
+   description: "lnc demo web sg"
+   tags: { "Name": "lncsg"}
+   vpc_id: "{{ vpc.vpc.id }}"
+   region: us-east-1
+   rules: 
+    - proto: tcp
+      ports:
+       - 80
+       - 22
+      cidr_ip: 0.0.0.0/0
+  
