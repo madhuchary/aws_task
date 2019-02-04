@@ -26,7 +26,7 @@ Nginx using Docker in AWS
 
     * secretkey
 
-    * region
+    * region (us-east-1)
 
     * output format
 
