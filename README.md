@@ -10,7 +10,6 @@ Nginx using Docker in AWS
 
 * Download accesskey and secretkey of above user.
 
-
 ## AWS Local Environment
 
 * Install AWS CLI (For this demo I am using Ubuntu as my local workstation)
