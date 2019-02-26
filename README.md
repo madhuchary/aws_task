@@ -1,4 +1,4 @@
-Nginx using Docker in AWS
+Nginx Apache using Docker in AWS
 
 
 # Setup your environment 
